@@ -1,0 +1,75 @@
+## Sign up version 1.0
+
+a = 0
+while a < 2 :
+    a = a + 1
+    first_name = input("Enter First name: ") 
+    if first_name.istitle() and first_name.isalpha() and " " not in first_name:
+        b = 0
+        while b < 2:
+            b = b + 1
+            second_name = input("Enter Second name: ")
+            if second_name.istitle() and second_name.isalpha() and " " not in second_name:
+                c = 0
+                while c < 2:
+                    c = c + 1
+                    age = input("Enter your age: ")
+                    if age.isdigit() and " " not in age:
+                        age = int(age)
+                        if age>0 :
+                            if age<=18:
+                                print("You are minor")
+                            elif age>=18 and age<=150:
+                                print("You are adult")
+                            else :
+                                print("You are not eligible")
+                            input("Enter Address: ")
+                            d = 0
+                            while d < 2:
+                                d = d + 1
+                                mob_no = input("Enter your contact number: ")
+                                if len(mob_no) == 10 and mob_no.isdigit() and " " not in mob_no:
+                                    e = 0
+                                    while e < 2:
+                                        e += 1
+                                        username = input("Create username: ")
+                                        if username.isalpha():                                           
+                                            f = 0
+                                            while f < 1:
+                                                f += 1
+                                                password = input("Enter your password: ") 
+                                                if password[0].isupper() and len(password) == 8 and " " not in password:
+                                                    if ("!" in password or "@" in password or "#" in password or "$" in password ):
+                                                        confirm_password = input("Confirm Password: ")
+                                                        if password == confirm_password:
+                                                            print("Sign up done successfully...")
+                                                        else:
+                                                            print("Your password is mismatch")
+                                                    else:
+                                                        print("password at least one special character")
+                                                else:
+                                                    print("enter correct password") 
+                    
+                                  
+                                            break
+                                        else:
+                                            print("Please enter correct username.")
+                                    break
+                                else:
+                                    print("Please Enter correct the contact number.")
+                        break
+                    else:
+                        print("Please enter the correct value of age.")
+                else:
+                    print("\nYou failed to sign up...")
+                break
+            else:
+                print("please enter correct second name.")
+        else:
+            print("\nYou failed to sign up...")
+           
+        break
+    else:
+        print("please enter correct first name.")
+else:
+    print("\nYou failed to sign up...")
